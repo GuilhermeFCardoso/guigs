@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goleada Coral</title>
+    <style>
+        h2 {
+            font-size: 14px;         /* Tamanho da fonte */
+            
+         
+            color: black;          /* Cor do texto (vermelho) */
+            text-transform: ; /* Deixa o texto em maiúsculas */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
+            text-align: center;      /* Centraliza o texto */
+            font-family: 'Arial', Arial; /* Tipo da fonte */
+        }
+        /* Estilo global */
+        body {
+            font-family: 'Arial', Arial;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Estilo das abas */
+        .tab {
+            display: flex;
+            justify-content: center;
+            border-bottom: 2px solid #c00000;
+            background-color: #c00000;
+            margin-bottom: 20px;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        .tab button {
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            flex: 1;/* Cada aba ocupa a mesma quantidade de espaço */
+        }
+
+        .tab button:hover {
+            color: #007bff;
+        }
+
+        .tab button.active {
+            color: #c00000;
+            border-bottom: 3px solid #007bff;
+        }
+
+        /* Conteúdo das abas */
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .tabcontent.active {
+            display: block;
+        }
+
+        /* Estilos para as tabelas */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #c00000;
+            color: #fff;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tfoot {
+            font-weight: bold;
+            background-color: #c00000;
+            color: white;
+        }
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .tab button {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            table th, table td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .tab {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 280px) {
+            table th, table td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .tab button {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            body {
+                padding: 10px;
+            }
+        }
+        /* Garantindo que a tabela seja rolável em dispositivos pequenos */
+        .table-wrapper {
+            overflow-x: auto; /* Para garantir que as tabelas possam rolar horizontalmente em telas menores */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu de Abas -->
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'TabelaGeral')">Tabela Geral</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba2')">Ranking Visitas</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba3')">Rodada Premiada</button>
+        <button class="tablinks" onclick="openTab(event, 'Aba4')">Ranking Propostas + Vendas</button>
+    </div>
+
+    <!-- Conteúdo das Abas -->
+    <div id="TabelaGeral" class="tabcontent active">
+       
+        </head>
+        <body>
+
+
+
+            <!-- Primeira tabela - Grupos -->
+            <h2>Ranking de Grupos</h2>
+            <table>
+                <tr>
+                    <th>Grupo</th>
+                    <th>Imobiliárias</th>
+                    <th>Visitas</th>
+                    <th>Propostas</th>
+                    <th>Vendas</th>
+                    <th>VGV</th>
+                    <th>VGV Proposta</th>
+                    <th>BYD</th>
+                    <th>BYD Und</th>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Outras Imobiliárias</td>
+                    <td>108</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>R$ 1,59M</td>
+                    <td>R$ 2,72M</td>
+                    <td>R$ 10,00M</td>
+                    <td>30</td>
+                </tr>
+                <td>5</td>
+                <td>Coral</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+                <td>R$ 0M</td>
+                <td>R$ 0,53M</td>
+                <td>R$ 10,00M</td>
+                <td>30</td>
+                <tr>
+                    <td>3</td>
+                    <td>Prime Soho</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 0,44M</td>
+                    <td>R$ 10,00M</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>MAP</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 10,00M</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Imóveis de Primeira</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 10,00M</td>
+                    <td>30</td>
+                </tr>
+                <tfoot>
+                    <td colspan="2"><strong>Total</strong></td>
+                    <td>121</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>R$ 1,60M</td>
+                    <td>R$ 3,15M</td>
+                    <td colspan="2"></td>
+                </tfoot>
+            </table>
+
+            <!-- Segunda tabela - Imobiliárias -->
+
+            <h2>Imobiliárias</h2>
+            <table>
+                <tr>
+                    <th>Imobiliária</th>
+                    <th>Visitas</th>
+                    <th>Propostas</th>
+                    <th>Vendas</th>
+                    <th>VGV</th>
+                    <th>VGV Proposta</th>
+                    <th>Rodada Premiada</th>
+                </tr>
+                <tr>
+                    <td>Coral</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>2</td>
+                    <td>R$ 0,5M</td>
+                    <td>R$ 0,0M</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Autônomo</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>R$ 0,3M</td>
+                    <td>R$ 0,0M</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Lopes Home</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>R$ 0,6M</td>
+                    <td>R$ 0,0M</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Ápice Inv. imob.</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>R$ 0,7M</td>
+                    <td>R$ 0,7M</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>Mubbi</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,2M</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Aruanda</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,8M</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Prime Soho</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,4M</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>To Be Home</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,5M</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Vivacon</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,6M</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>23</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Solano</td>
+                    <td>14</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Tuesta & Galvão</td>
+                    <td>10</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>MAP</td>
+                    <td>7</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>D18</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Dante</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>I.P.</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,0M</td>
+                    <td>3</td>
+                </tr>
+                <tfoot>
+                    <td colspan="1"><strong>Total</strong></td>
+                    <td>121</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>R$ 1,60M</td>
+                    <td>R$ 3,2M</td>
+                    <td colspan="1"></td>
+                </tfoot>
+            </table>
+
+
+            <!-- Terceira tabela - Corretores -->
+            <h2>Corretores</h2>
+            <table>
+                <tr>
+                    <th>Corretores</th>
+                    <th>Imobiliária</th>
+                    <th>Visitas</th>
+                    <th>Propostas</th>
+                    <th>Vendas</th>
+                    <th>VGV</th>
+                    <th>VGV Proposta</th>
+                    <th>iPhone</th>
+                </tr>
+                <tr>
+                    <td>Rafael</td>
+                    <td>Hoje Imóveis</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>R$ 0,3M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Cintia Zampar</td>
+                    <td>Lopes Home</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>R$ 0,6M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Barbara</td>
+                    <td>Ápice Inv. imob.</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>R$ 0,7M</td>
+                    <td>R$ 0,68M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Gabriel</td>
+                    <td>Mubbi</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,78M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Breno</td>
+                    <td>Urbana</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,49M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Nando</td>
+                    <td>Prime Soho</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,44M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>João Pedro</td>
+                    <td>Vivacon</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,55M</td>
+                    <td>R$ 6,5M</td>
+                </tr>
+                <tr>
+                    <td>Fernando</td>
+                    <td>Aruanda</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Jair</td>
+                    <td>Mubbi</td>
+                    <td>6</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Jacilmara</td>
+                    <td>Tuesta & Galvão</td>
+                    <td>5</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Adriano</td>
+                    <td>D18</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Franciele</td>
+                    <td>Time</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Bruno</td>
+                    <td>Solano</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tr>
+                    <td>Deck</td>
+                    <td>MAP</td>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>R$ 0,0M</td>
+                    <td>R$ 0,00M</td>
+                    <td>R$ 1,5M</td>
+                </tr>
+                <tfoot>
+                    <td colspan="2"><strong>Total</strong></td>
+                    <td>121</td>
+                    <td>6</td>
+                    <td>5</td>
+                    <td>R$ 1,60M</td>
+                    <td>R$ 3,15M</td>
+                    <td colspan="3"></td>
+                </tfoot>
+            </table>
+
+                </tfoot>
+
+
+
+
+        <!-- Outras tabelas podem ser inseridas aqui, como as de Imobiliárias e Corretores -->
+    </div>
+
+    <!-- Abas vazias (em construção) -->
+    <div id="Aba2" class="tabcontent">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Imobiliárias</th>
+                    <th>Visitas</th>
+                    <th colspan="1"></th>    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Time</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Solano</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Autônomo</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Tuesta & Galvão</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>MAP</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Mubbi</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>D18</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Aruanda</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Dante</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Prime Soho</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>I.P.</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>JBA</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>To Be Home</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>M11</td>
+                    <td>2</td>
+                </tr>
+            <tfoot>
+                <td colspan="2"></td>
+
+                <td colspan></td>
+            </tfoot>
+            </tbody>
+        </table>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Corretores</th>
+                    <th>Imobiliária</th>
+                    <th>Visitas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jair</td>
+                    <td>Mubbi</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Jacilmara</td>
+                    <td>Tuesta & Galvão</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Fernando Time</td>
+                    <td>Time</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Adriano</td>
+                    <td>D18</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Franciele</td>
+                    <td>Time</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Gabriel</td>
+                    <td>Mubbi</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Bruno</td>
+                    <td>Solano</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Deck</td>
+                    <td>MAP</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Rafael</td>
+                    <td>Hoje Imóveis</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Breno</td>
+                    <td>Urbana</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Nando</td>
+                    <td>Prime Soho</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Fernando Aruanda</td>
+                    <td>Aruanda</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Barbara</td>
+                    <td>Ápice Inv. imob.</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>João Pedro</td>
+                    <td>Vivacon</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Sandy</td>
+                    <td>Tuesta & Galvão</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <div id="Aba3" class="tabcontent">
+        <h2>Rodada Premiada</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Imobiliárias</th>
+                    <th>Rodada Premiada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Time</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>Ápice Inv. imob.</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>Lopes Home</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Solano</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Tuesta & Galvão</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Mubbi</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>MAP</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Aruanda</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>D18</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>Prime Soho</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>To Be Home</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Dante</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Vivacon</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>I.P.</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="Aba4" class="tabcontent">
+        <h2>Aba 4 - Conteúdo em construção</h2>
+    </div>
+
+    <script>
+        // Função para abrir abas
+        function openTab(evt, tabName) {
+            // Esconder todo o conteúdo das abas
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Remover a classe "active" de todos os botões
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Mostrar a aba atual e adicionar a classe "active" ao botão da aba atual
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Exibir a primeira aba como padrão
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementsByClassName("tablinks")[0].click();
+        });
+    </script>
+
+</body>
+</html>
